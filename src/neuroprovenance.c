@@ -212,7 +212,7 @@ REFID addAllEnvironVariables(ProvObjectPtr p_prov, ProcessPtr p_proc, char **env
        {
 	   sprintf(buffer, "%s\0", &thisEnv[pos]);
 	   //fprintf(stderr, "<%s>=%s\n", name, &buffer);
-	   addAttribute(p_record, id, "ni", NULL, name, &buffer);
+	   addAttribute(p_record, id, "ni", NULL, name, &buffer[0]);
        }
        free(name);
     }
